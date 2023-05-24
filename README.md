@@ -3,7 +3,6 @@
 ## React Challenge: Consume pokemon API.
 
 
-<hr> 
 
 ### Challenge Development Taks:
 Consume the API and list all pokemons of the resquested endpoint.
@@ -24,10 +23,12 @@ exp => base_experience
 
 BONUS: If you can order by name.
 
-* Consume the API and list all pokemons of the resquested endpoint.  </p> 
+<hr> 
+
+* Consume the API and list all pokemons of the resquested endpoint.  ✅</p> 
 * You must show of each pokemon: </p>
 - image </p>
-- name </p>
+- name ✅</p>
 - exp. </p>
 * If you can order by name. </p>
 
