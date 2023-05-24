@@ -19,3 +19,23 @@ box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.pokemon-container {
+  display: flex;
+  justify-content: center;
+  
+  border: 1px solid blue;
+}
+
+.pokemon-info {
+display: flex;
+
+border: 1px solid green;
+}
+
+.pokemon-img {
+  height: 40px;
+  width: 45px;
+
+  border: 1px solid red;
+}
