@@ -57,7 +57,13 @@ export function App() {
     <>
       {
         pokemonList.map((itemObj, index) => (
-          <h1 key={index}>{index} {itemObj.name}</h1>
+          <div className='pokemon-container' key={index}>
+            <div className='pokemon-info'>
+              <p>{index} {itemObj.name}</p>
+              {/* <p>TEM Q PEGAR A XP</p> */}
+            </div>
+            <img className='pokemon-img' src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="Pokemon image" />
+          </div>
         ))
       }
     </>
