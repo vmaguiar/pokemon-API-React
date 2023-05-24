@@ -19,13 +19,29 @@ BONUS: If you can order by name.
 */
 
 
+import axios from 'axios'
+
 import './App.css'
+
+const baseURL = 'https://pokeapi.co/api/v2/pokemon';
 
 export function App() {
 
+  const testandoAxios = async () => {
+    try {
+      const response =  await axios.get(baseURL);
+      console.log(response);
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+
+  testandoAxios();
+
   return (
     <>
-      <h1>Initial commit</h1>
+      <h1>Import & Testing API with axios</h1>
     </>
   )
 }
