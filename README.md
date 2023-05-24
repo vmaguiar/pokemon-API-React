@@ -30,7 +30,7 @@ BONUS: If you can order by name.
 - image </p>
 - name ✅</p>
 - exp. </p>
-* If you can order by name. </p>
+* Order by name. </p>
 
 ### Additional features:
 
