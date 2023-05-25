@@ -18,6 +18,8 @@ exp => base_experience
 BONUS: If you can order by name.
 */
 
+// maybe create a pokemon componente?
+
 
 import axios from 'axios'
 import { useEffect, useState } from 'react';
