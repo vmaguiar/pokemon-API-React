@@ -41,7 +41,7 @@ BONUS: If you can order by name.
 ### Clone this repository:
 
 ```bash 
-git clone https://github.com/brwnalima/login-form-test
+git clone https://github.com/vmaguiar/pokemon-API-React.git
 ```
 
 ### download all dependences used by the app:
