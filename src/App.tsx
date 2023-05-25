@@ -55,14 +55,31 @@ export function App() {
 
   return (
     <>
+      <h3>Solution by: vmAguiar</h3>
+      <h1>Pokemon API consumer - React Challenge</h1>
+      <hr />
       {
         pokemonList.map((itemObj, index) => (
-          <div className='pokemon-container' key={index}>
-            <div className='pokemon-info'>
-              <p>{index} {itemObj.name}</p>
-              {/* <p>TEM Q PEGAR A XP</p> */}
+          <div className='pokemonsList-container' key={index}>
+            
+            <div className="pokemonSelf-container">
+              <span>{index}</span>
+
+              <div className='pokemon-card'>
+                <img className='pokemon-img'
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" 
+                  alt="pokemon image"
+                />
+
+                <div className='pokemon-info'>
+                  <span>{itemObj.name}</span>
+                  <span> - Exp: 1000xp</span>
+                </div>
+
+              </div>
+              
             </div>
-            <img className='pokemon-img' src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="Pokemon image" />
+
           </div>
         ))
       }
