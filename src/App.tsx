@@ -58,12 +58,12 @@ export function App() {
       <h3>Solution by: vmAguiar</h3>
       <h1>Pokemon API consumer - React Challenge</h1>
       <hr />
-      {
-        pokemonList.map((itemObj, index) => (
-          <div className='pokemonsList-container' key={index}>
-            
-            <div className="pokemonSelf-container">
-              <span>{index}</span>
+
+      <div className='pokemonsList-container'>
+        {
+          pokemonList.map((itemObj, index) => (
+            <div className="pokemonSelf-container" key={index}>
+              <span>{index + 1}</span>
 
               <div className='pokemon-card'>
                 <img className='pokemon-img'
@@ -77,12 +77,13 @@ export function App() {
                 </div>
 
               </div>
-              
-            </div>
 
-          </div>
-        ))
-      }
+            </div>
+          
+          ))
+        }
+      </div>
+
     </>
   );
 }
