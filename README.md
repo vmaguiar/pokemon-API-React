@@ -1,41 +1,49 @@
+<h3 style="display: block" align = "center"> By vmaguiar </ h3>
+
 # Pokemon API
 
 ## React Challenge: Consume pokemon API.
 
 
-
-### Challenge Development Taks:
-Consume the API and list all pokemons of the resquested endpoint.
+### Development Challenge Tasks:
+Consume the API and list all pokemons of the resquested endpoint. </p>
 https://pokeapi.co/api/v2/pokemon
 
-You must show of each pokemon:
-- image
-- name
-- exp
+<br>
 
-You can acess the information of a single pokemon at:
+You must show of each pokemon:
+ - image
+ - name
+ - exp
+
+<br>
+
+You can acess the information of a single pokemon at: </p>
 https://pokeapi.co/api/v2/pokemon/:id
 
+<br>
 
-HINT:
-image => sprites.front_default
-exp => base_experience
+HINT: </p>
+image => sprites.front_default. </p>
+exp => base_experience. </p><br>
 
-BONUS: If you can order by name.
+BONUS: If you can order by name. </p>
 
-<hr> 
+<hr><br>
 
+### Tasks done:
 * Consume the API and list all pokemons of the resquested endpoint.  ✅</p> 
-* You must show of each pokemon: </p>
-- image ✅</p>
-- name ✅</p>
-- exp. ✅</p>
-* Order by name. (❔)</p>
+* You must show of each pokemon: ✅</p>
+  1. image ✔️</p>
+  2. name ✔️</p>
+  3. exp. ✔️</p>
+* Order by name. ✅</p>
 
 ### Additional features:
 
 * Detailed README. ✅</p>
 * Create a pokemon component. ✅</p>
+* Create a styled card for each pokemon loaded from the api. ✅</p><br>
 
 #### to get things worked:
 
