@@ -42,11 +42,30 @@ export function App() {
   const [pokemonUrlList, setPokemonUrlList] = useState<Array<IpokemonObj>>([]);
 
 
+  const sortByName = (paramArray: any) => {
+    paramArray.sort((a: any, b: any) => {
+      const nameA = a.name.toLocaleLowerCase();
+      const nameB = b.name.toLocaleLowerCase();
+      if(nameA < nameB) {
+        return -1;
+      }
+      else if(nameA > nameB) {
+        return 1;
+      }
+      else {
+        return 0;
+      }
+    });
+    return paramArray;
+  };
+
+
   useEffect(() => {
     //Create the API request as scoped async function in the hook
     async function loadApiData() {
       try {
         const response =  await axios.get(baseURL);
+        sortByName(response.data.results);
         setPokemonUrlList(response.data.results);
       }
       catch(error) {
@@ -56,6 +75,7 @@ export function App() {
 
     loadApiData();
   }, []);
+  
 
   return (
     <>
@@ -64,14 +84,14 @@ export function App() {
       <hr />
 
       <div className='pokemonsList-container'>
-          {
-            pokemonUrlList.map((itemObj, index) => (
-              <div className="pokemonSelf-container" key={itemObj.name}>
-                <span>{index + 1}</span>
-                < Pokemon props = {itemObj}/>
-              </div>
-            ))
-          }
+        {
+          pokemonUrlList.map((itemObj, index) => (
+            <div className="pokemonSelf-container" key={itemObj.name}>
+              <span>{index + 1}</span>
+              < Pokemon props = {itemObj}/>
+            </div>
+          ))
+        }
       </div>
 
     </>
