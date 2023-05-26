@@ -3,7 +3,9 @@
 # Pokemon API
 
 ## React Challenge: Consume pokemon API.
-
+<p align='center'>
+  <img width='600' src='src/assets/to_readme/app-gif.gif'
+</p>
 
 ### Development Challenge Tasks:
 Consume the API and list all pokemons of the resquested endpoint. </p>
@@ -43,7 +45,11 @@ BONUS: If you can order by name. </p>
 
 * Detailed README. ✅</p>
 * Create a pokemon component. ✅</p>
-* Create a styled card for each pokemon loaded from the api. ✅</p><br>
+* Create a styled card for each pokemon loaded from the api. ✅</p>
+ * Create shadow of the card. ✔️</p>
+ * Scale transition on hover. ✔️</p>
+ * Scale the shadow on hover. ✔️</p>
+ * Change background on hover. ✔️</p>
 
 #### to get things worked:
 
