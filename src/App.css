@@ -68,8 +68,20 @@
     justify-content: space-between;
     align-items: center;
   
-    background: #eeeeee;
+    background: #f9f9f9f9;
   
+    -webkit-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.4);
+
+    transition: transform 0.3s;
+  }
+
+  .pokemonSelf-container:hover {
+    transform: scale(1.1);
+    
+    background: #eeee;
+
     -webkit-box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.4);
     -moz-box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.4);
     box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.4);
