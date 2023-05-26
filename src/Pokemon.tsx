@@ -41,7 +41,9 @@ export function Pokemon(props: { props:IpokemonObj }) {
             />
 
             <div className='pokemon-info'>
-                <span className="pokemon-name">{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</span>
+                <span className="pokemon-name">
+                    <b>{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</b>
+                </span>
                 <span>Exp: {pokemonDetails.exp}</span>
             </div>
         </div>
