@@ -66,7 +66,7 @@ export function App() {
       <div className='pokemonsList-container'>
           {
             pokemonUrlList.map((itemObj, index) => (
-              <div className="pokemonSelf-container">
+              <div className="pokemonSelf-container" key={itemObj.name}>
                 <span>{index + 1}</span>
                 < Pokemon props = {itemObj}/>
               </div>
