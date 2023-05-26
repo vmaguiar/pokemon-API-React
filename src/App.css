@@ -45,7 +45,7 @@
   .pokemonsList-container {
     display: grid;
     grid-auto-flow: column;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
     align-content: center;
     justify-content: flex-start;
   
@@ -58,17 +58,30 @@
   }
   
   .pokemonSelf-container {
-    width: 200px;
+    width: auto;
   
     margin: 5px;
     /* border: 1px solid black; */
+    border-radius: 10px;
   
     display: flex;
     justify-content: space-between;
     align-items: center;
   
-    background: #eeeeee;
+    background: #f9f9f9f9;
   
+    -webkit-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.4);
+
+    transition: transform 0.3s;
+  }
+
+  .pokemonSelf-container:hover {
+    transform: scale(1.1);
+    
+    background: #eeee;
+
     -webkit-box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.4);
     -moz-box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.4);
     box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.4);
@@ -88,14 +101,20 @@
   .pokemon-info {
     display: flex;
     flex-direction: column;
+    justify-items: flex-start;
+    align-items: flex-start;
   
     margin: 3px;
     /* border: 1px solid green; */
   }
+
+  .pokemon-info .pokemon-name {
+    font-size: 20px;
+  }
   
   .pokemon-img {
-    height: 40px;
-    width: 45px;
+    height: 100px;
+    width: 105px;
   
     margin: 3px;
     /* border: 1px solid red; */

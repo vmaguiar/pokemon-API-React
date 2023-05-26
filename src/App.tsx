@@ -18,11 +18,13 @@ exp => base_experience
 BONUS: If you can order by name.
 */
 
-// maybe create a pokemon componente?
+// maybe create a pokemon component?
 
 
 import axios from 'axios'
 import { useEffect, useState } from 'react';
+
+import { Pokemon } from './Pokemon';
 
 import './App.css'
 
@@ -30,14 +32,32 @@ import './App.css'
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon';
 
-interface IpokemonObj {
+export interface IpokemonObj {
   name: string,
   url: string
 };
 
 
 export function App() {
-  const [pokemonList, setPokemonList] = useState<Array<IpokemonObj>>([]);
+  const [pokemonUrlList, setPokemonUrlList] = useState<Array<IpokemonObj>>([]);
+
+
+  const sortByName = (paramArray: any) => {
+    paramArray.sort((a: any, b: any) => {
+      const nameA = a.name.toLocaleLowerCase();
+      const nameB = b.name.toLocaleLowerCase();
+      if(nameA < nameB) {
+        return -1;
+      }
+      else if(nameA > nameB) {
+        return 1;
+      }
+      else {
+        return 0;
+      }
+    });
+    return paramArray;
+  };
 
 
   useEffect(() => {
@@ -45,7 +65,8 @@ export function App() {
     async function loadApiData() {
       try {
         const response =  await axios.get(baseURL);
-        setPokemonList(response.data.results);
+        sortByName(response.data.results);
+        setPokemonUrlList(response.data.results);
       }
       catch(error) {
         console.log(error);
@@ -54,6 +75,7 @@ export function App() {
 
     loadApiData();
   }, []);
+  
 
   return (
     <>
@@ -63,25 +85,11 @@ export function App() {
 
       <div className='pokemonsList-container'>
         {
-          pokemonList.map((itemObj, index) => (
-            <div className="pokemonSelf-container" key={index}>
+          pokemonUrlList.map((itemObj, index) => (
+            <div className="pokemonSelf-container" key={itemObj.name}>
               <span>{index + 1}</span>
-
-              <div className='pokemon-card'>
-                <img className='pokemon-img'
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" 
-                  alt="pokemon image"
-                />
-
-                <div className='pokemon-info'>
-                  <span>{itemObj.name}</span>
-                  <span> - Exp: 1000xp</span>
-                </div>
-
-              </div>
-
+              < Pokemon props = {itemObj}/>
             </div>
-          
           ))
         }
       </div>
