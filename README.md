@@ -27,14 +27,15 @@ BONUS: If you can order by name.
 
 * Consume the API and list all pokemons of the resquested endpoint.  ✅</p> 
 * You must show of each pokemon: </p>
-- image </p>
+- image ✅</p>
 - name ✅</p>
-- exp. </p>
-* Order by name. </p>
+- exp. ✅</p>
+* Order by name. (❔)</p>
 
 ### Additional features:
 
 * Detailed README. ✅</p>
+* Create a pokemon component. ✅</p>
 
 #### to get things worked:
 
