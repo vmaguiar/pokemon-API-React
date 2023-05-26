@@ -11,6 +11,7 @@ export function Pokemon(props: { props:IpokemonObj }) {
         img: ''
     });
 
+
     useEffect(() => {
         async function loadDetails() {
             try {
