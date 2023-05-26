@@ -5,7 +5,7 @@
 ## React Challenge: Consume pokemon API.
 <p align='center'>
   <img width='600' src='src/assets/to_readme/app-gif.gif'
-</p>
+</p><br>
 
 ### Development Challenge Tasks:
 Consume the API and list all pokemons of the resquested endpoint. </p>
@@ -49,7 +49,7 @@ BONUS: If you can order by name. </p>
  * Create shadow of the card. ✔️</p>
  * Scale transition on hover. ✔️</p>
  * Scale the shadow on hover. ✔️</p>
- * Change background on hover. ✔️</p>
+ * Change background on hover. ✔️</p><br>
 
 #### to get things worked:
 
