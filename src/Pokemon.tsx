@@ -32,23 +32,18 @@ export function Pokemon(props: { props:IpokemonObj }) {
         return <div> - </div>
     }
 
+
     return (
-        <div className="pokemonSelf-container">
-        {/* <span>{index + 1}</span> */}
+        <div className='pokemon-card'>
+            <img className='pokemon-img'
+                src={pokemonDetails.img}
+                alt="pokemon image"
+            />
 
-              <div className='pokemon-card'>
-                <img className='pokemon-img'
-                  src={pokemonDetails.img}
-                  alt="pokemon image"
-                />
-
-                <div className='pokemon-info'>
-                  <span>{pokemonDetails.name}</span>
-                  <span>Exp: {pokemonDetails.exp}</span>
-                </div>
-
-              </div>
-
+            <div className='pokemon-info'>
+                <span className="pokemon-name">{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</span>
+                <span>Exp: {pokemonDetails.exp}</span>
             </div>
+        </div>
     );
 };

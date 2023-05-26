@@ -18,11 +18,13 @@ exp => base_experience
 BONUS: If you can order by name.
 */
 
-// maybe create a pokemon componente?
+// maybe create a pokemon component?
 
 
 import axios from 'axios'
 import { useEffect, useState } from 'react';
+
+import { Pokemon } from './Pokemon';
 
 import './App.css'
 
@@ -30,14 +32,14 @@ import './App.css'
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon';
 
-interface IpokemonObj {
+export interface IpokemonObj {
   name: string,
   url: string
 };
 
 
 export function App() {
-  const [pokemonList, setPokemonList] = useState<Array<IpokemonObj>>([]);
+  const [pokemonUrlList, setPokemonUrlList] = useState<Array<IpokemonObj>>([]);
 
 
   useEffect(() => {
@@ -45,7 +47,7 @@ export function App() {
     async function loadApiData() {
       try {
         const response =  await axios.get(baseURL);
-        setPokemonList(response.data.results);
+        setPokemonUrlList(response.data.results);
       }
       catch(error) {
         console.log(error);
@@ -62,28 +64,14 @@ export function App() {
       <hr />
 
       <div className='pokemonsList-container'>
-        {
-          pokemonList.map((itemObj, index) => (
-            <div className="pokemonSelf-container" key={index}>
-              <span>{index + 1}</span>
-
-              <div className='pokemon-card'>
-                <img className='pokemon-img'
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" 
-                  alt="pokemon image"
-                />
-
-                <div className='pokemon-info'>
-                  <span>{itemObj.name}</span>
-                  <span> - Exp: 1000xp</span>
-                </div>
-
+          {
+            pokemonUrlList.map((itemObj, index) => (
+              <div className="pokemonSelf-container">
+                <span>{index + 1}</span>
+                < Pokemon props = {itemObj}/>
               </div>
-
-            </div>
-          
-          ))
-        }
+            ))
+          }
       </div>
 
     </>
